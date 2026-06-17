@@ -23,41 +23,19 @@
                     </a>
                 </li>
 
-                <li class="nav-item {{ request()->is('admin/*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ request()->is('admin/*') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-cogs"></i>
-                        <p>
-                            Management
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Users</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Roles</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chart-bar"></i>
-                        <p>Reports</p>
+                    <a href="{{ url('/masterdata') }}"
+                       class="nav-link {{ request()->is('masterdata') ? 'active' : '' }}">
+                        <i class="nav-icon bi bi-palette"></i>
+                        <p>Master Data</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-cog"></i>
-                        <p>Settings</p>
+                    <a href="{{ url('/masterdata/edit') }}"
+                       class="nav-link {{ request()->is('masterdata/edit') ? 'active' : '' }}">
+                        <i class="nav-icon bi bi-box-seam-fill"></i>
+                        <p>Edit Master Data</p>
                     </a>
                 </li>
             </ul>
